@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Shreyansh Kushwaha – Electrical Engineering student working on renewable energy, CAD design, embedded systems and power electronics.">
+<meta property="og:title" content="Shreyansh Kushwaha">
+<meta property="og:description" content="Shreyansh Kushwaha – Electrical Engineering student working on renewable energy, CAD design, embedded systems and power electronics.">
+<title>Shreyansh Kushwaha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: quiet single column on off-white; generous whitespace, thin navy rules, one navy accent per section. */
+:root{
+  --bg:#f7f6f2;
+  --surface:#efeee9;
+  --ink:#1b1d22;
+  --muted:#686c74;
+  --line:#e0dfd9;
+  --cherry:#1f3f8f;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121418;--surface:#1a1d23;--ink:#e8e9ec;--muted:#9a9ea7;--line:#2a2e36;--cherry:#8aa6f0;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121418;--surface:#1a1d23;--ink:#e8e9ec;--muted:#9a9ea7;--line:#2a2e36;--cherry:#8aa6f0;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--cherry);text-decoration:none;border-bottom:1px solid currentColor}
+a:hover{opacity:.75}
+:focus-visible{outline:2px solid var(--cherry);outline-offset:3px}
+::selection{background:var(--cherry);color:var(--bg)}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;flex-wrap:wrap}
+.mark{font-family:var(--serif);font-size:24px;line-height:1;color:var(--ink);border:0}
+.mark span{color:var(--cherry)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px 24px;flex-wrap:wrap}
+nav ul a{font-size:14px;color:var(--muted);border:0}
+nav ul a:hover{color:var(--cherry);opacity:1}
+
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);padding-block:72px 88px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,10vw,108px);line-height:.95;letter-spacing:-.02em;margin:0 0 28px;text-wrap:balance}
+h1 em{color:var(--cherry)}
+.lede{font-size:clamp(17px,2vw,19px);color:var(--ink);max-width:40ch;margin:0 0 32px}
+.cta{display:flex;gap:28px;flex-wrap:wrap;font-size:15px}
+.cta a.solid{background:var(--cherry);color:var(--bg);border:0;padding:12px 22px;border-radius:999px}
+.cta a.plain{padding-block:12px;border:0;color:var(--ink)}
+.cta a.plain:after{content:" →";color:var(--cherry)}
+
+section{border-top:1px solid var(--line)}
+section .wrap{display:grid;grid-template-columns:160px minmax(0,1fr);gap:40px;padding-block:72px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cherry);padding-top:8px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,42px);line-height:1.1;margin:0 0 24px;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.15;margin:0 0 6px}
+p{margin:0 0 18px;max-width:62ch}
+strong{font-weight:500}
+.meta{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin:0 0 16px}
+
+.channels{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.channels li{background:var(--bg);padding:14px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.channels b{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--cherry);line-height:1}
+.channels span{font-size:13px;color:var(--muted)}
+
+.roles{display:grid;gap:48px}
+.roles ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.roles li{padding-left:20px;position:relative;max-width:62ch}
+.roles li:before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--cherry)}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px 40px}
+.skills h4{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 10px}
+.skills p{font-size:15px;color:var(--muted);margin:0;line-height:1.75}
+
+.contact{display:grid;gap:0;margin-top:8px}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:16px;align-items:baseline;padding-block:16px;border-bottom:1px solid var(--line)}
+.row:first-child{border-top:1px solid var(--line)}
+.row small{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.row .v{font-size:17px;overflow-wrap:anywhere;min-width:0}
+.copy{font-family:var(--mono);font-size:12px;background:none;border:0;color:var(--cherry);cursor:pointer;padding:0}
+
+footer .wrap{padding-block:32px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:40px 56px}
+    section .wrap{grid-template-columns:minmax(0,1fr);gap:12px;padding-block:52px}
+  .channels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr) auto}
+  .row small{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{margin:0}
+</style>
+</head>
+<body>
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#home">S<span>.</span>K</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Electrical Engineering · Uttar Pradesh, India</p>
+      <h1>Shreyansh <em>Kushwaha</em></h1>
+      <p class="lede">Building practical solutions in renewable energy, CAD design, embedded systems and power electronics.</p>
+      <div class="cta">
+        <a class="solid" href="#work">View my work</a>
+        <a class="plain" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="label">About</div>
+    <div>
+      <h2>Electrical engineering, turned into real hardware.</h2>
+      <p>I am an Electrical Engineering undergraduate with a strong interest in <strong>renewable energy systems, power electronics, embedded systems, IoT hardware and mechanical CAD design</strong>. I enjoy turning engineering concepts into working prototypes for real problems in energy, agriculture, automation and product design.</p>
+      <p>My work sits between electrical and mechanical engineering. I design in <strong>SolidWorks and CATIA</strong>, from 3D models and assemblies to technical drawings, with a focus on turbine components, pulleys, enclosures and renewable-energy hardware.</p>
+      <p>I have been working on wind-turbine research and development since 2024, and I use <strong>MATLAB and Simulink</strong> to simulate and model electrical systems.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="label">Work</div>
+    <div>
+      <p class="meta">Key project · Wind, solar &amp; IoT</p>
+      <h2>Hybrid Vertical Axis Wind Turbine</h2>
+      <p>A hybrid renewable-energy system combining wind and solar generation with IoT monitoring. The rotor pairs Darrieus lift blades with a Savonius drag core, so it starts in light wind and still runs efficiently at higher speeds. Solar panels add a second source, and an ESP8266 collects sensor data from the whole system.</p>
+      <p>Skills developed: renewable-energy system design, sensor integration, embedded hardware and technical documentation.</p>
+      <ul class="channels" aria-label="Parameters monitored by the ESP8266">
+        <li><b>V</b><span>Voltage</span></li>
+        <li><b>A</b><span>Current</span></li>
+        <li><b>m/s</b><span>Wind speed</span></li>
+        <li><b>RPM</b><span>Rotor speed</span></li>
+        <li><b>W</b><span>Solar output</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="label">Experience</div>
+    <div class="roles">
+      <div>
+        <h3>HOLM Energy</h3>
+        <p class="meta">Prototype development &amp; technical documentation</p>
+        <ul>
+          <li>Reviewed drawings and specifications, and explained 3D models to the team</li>
+          <li>Supported prototype development from design to build</li>
+          <li>Prepared technical documents and supervised students</li>
+          <li>Sourced components and coordinated with generator suppliers</li>
+        </ul>
+      </div>
+      <div>
+        <h3>ABV-IIITM Gwalior</h3>
+        <p class="meta">Research intern · Power electronics</p>
+        <ul>
+          <li>Studied DC-DC converters and converter design concepts</li>
+          <li>Worked on power electronics for wind-energy systems</li>
+          <li>Used MATLAB and Simulink for simulation and modelling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="label">Skills</div>
+    <div class="skills">
+      <div><h4>CAD &amp; Mechanical</h4><p>SolidWorks, CATIA, 3D modelling, assembly design, technical drawings, prototype design</p></div>
+      <div><h4>Electrical &amp; Power</h4><p>Power electronics, DC-DC converters, electrical machines, renewable energy systems, microgrids, wind and solar</p></div>
+      <div><h4>Embedded &amp; IoT</h4><p>ESP8266, Arduino, sensors and actuators, IoT data monitoring, ThingSpeak, Embedded C basics</p></div>
+      <div><h4>Simulation &amp; Tools</h4><p>MATLAB, Simulink, circuit analysis, technical documentation, GitHub, MS Office</p></div>
+      <div><h4>Professional</h4><p>Problem-solving, teamwork, technical report writing, presentations, prototype debugging, project documentation</p></div>
+      <div><h4>Open to</h4><p>CAD design internships, renewable-energy R&amp;D, embedded systems projects, power electronics research</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="label">Contact</div>
+    <div>
+      <h2>Let's build something that runs on <em style="color:var(--cherry)">clean energy</em>.</h2>
+      <div class="contact">
+        <div class="row"><small>Email</small><span class="v" id="email">shrewaha@gmail.com</span><button type="button" id="copy-email" class="copy">Copy</button></div>
+        <div class="row"><small>LinkedIn</small><span class="v"><a href="https://www.linkedin.com/in/shrewaha" target="_blank" rel="noopener">linkedin.com/in/shrewaha</a></span><span></span></div>
+        <div class="row"><small>GitHub</small><span class="v"><a href="https://github.com/shrewaha" target="_blank" rel="noopener">github.com/shrewaha</a></span><span></span></div>
+        <div class="row"><small>Location</small><span class="v">Uttar Pradesh, India</span><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Shreyansh Kushwaha</span>
+    <span>Renewable energy · CAD · Embedded · Power electronics</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy-email').addEventListener('click',function(){
+  var b=this,el=document.getElementById('email');
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'}
+  try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)},sel)}catch(e){sel()}
+});
+</script>
+</body>
+</html>
